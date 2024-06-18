@@ -1,7 +1,10 @@
+import Agente from '#models/agente'
 import { BaseSeeder } from '@adonisjs/lucid/seeders'
 
 export default class extends BaseSeeder {
   async run() {
-    // Write your database queries inside the run method
+     await Agente.createMany([
+      {nome: "Sova", genero:"M", lore: "Alemao louco de guerra", tipoId: 1, habilidadeId: 2}
+    ])
   }
 }
