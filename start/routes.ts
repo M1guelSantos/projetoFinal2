@@ -1,4 +1,5 @@
 import AgentesController from '#controllers/agentes_controller';
+import ArmasController from '#controllers/armas_controller';
 import HabilidadeController from '#controllers/habilidades_controller'
 import TipoAgentesController from '#controllers/tipo_agentes_controller';
 import TipoArmasController from '#controllers/tipo_armas_controller';
@@ -14,4 +15,5 @@ router.resource('/habilidades', HabilidadeController).apiOnly();
 router.resource('/tipos-agentes', TipoAgentesController).apiOnly();
 router.resource('/tipos-armas', TipoArmasController).apiOnly();
 router.resource('/agentes', AgentesController).apiOnly();
+router.resource('/armas', ArmasController).apiOnly();
 

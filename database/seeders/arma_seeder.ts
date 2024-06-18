@@ -1,7 +1,12 @@
+import Arma from '#models/arma'
 import { BaseSeeder } from '@adonisjs/lucid/seeders'
 
 export default class extends BaseSeeder {
   async run() {
-    // Write your database queries inside the run method
+     await Arma.createMany([
+      {nome: 'teste', skin:'teste', preco: 10, tipoId: 1},
+      {nome: 'teste', skin:'teste', preco: 10, tipoId: 2},
+      {nome: 'teste', skin:'teste', preco: 10, tipoId: 2},
+    ])
   }
 }

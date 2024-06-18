@@ -9,7 +9,7 @@ export default class AgentesController {
     
       public async show({ params }: HttpContext) {
         const id = params.id
-        const agente = await Agente.findOrFail(id)
+        const agente = await Agente.query().preload('tipoAgente').preload('habilidade').preload('arma').where('id', id).firstOrFail()
         return agente
       }
     
