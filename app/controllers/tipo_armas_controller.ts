@@ -34,6 +34,6 @@ export default class TipoArmasController {
         const tipoarma = await  TipoArma.findOrFail(id)
         await tipoarma.delete()
     
-        return { message: ' Tipo de Arma excluído com sucesso' }
+        return { message: ' Tipo de Arma excluída com sucesso' }
       }
     }

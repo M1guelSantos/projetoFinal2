@@ -2,6 +2,7 @@ import { BaseModel, belongsTo, column } from '@adonisjs/lucid/orm'
 import TipoArma from './tipo_arma.js'
 import type { BelongsTo } from '@adonisjs/lucid/types/relations'
 
+
 export default class Arma extends BaseModel {
   @column({ isPrimary: true })
   declare id: number
@@ -22,5 +23,4 @@ export default class Arma extends BaseModel {
     foreignKey: 'tipoId'
   })
   declare tipoArma: BelongsTo<typeof TipoArma>
-
 }

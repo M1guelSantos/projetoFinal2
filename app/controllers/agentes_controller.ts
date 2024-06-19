@@ -34,6 +34,6 @@ export default class AgentesController {
         const agente = await Agente.findOrFail(id)
         await agente.delete()
     
-        return { message: 'Agente excluída com sucesso' }
+        return { message: 'Agente excluído com sucesso' }
       }
     }

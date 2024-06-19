@@ -5,7 +5,7 @@ export default class TipoAgente extends BaseModel {
   declare id: number
 
   @column()
-  declare nome: String
+  declare classe: String
 
   @column()
   declare descricao: String
